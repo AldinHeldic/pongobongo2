@@ -1,6 +1,60 @@
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
+    if (controller.player1.isPressed(ControllerButton.Left)) {
+        mySprite.x += 5
+    }
+    if (controller.player1.isPressed(ControllerButton.Right)) {
+        mySprite.x += -5
+    }
+    if (controller.player1.isPressed(ControllerButton.Up)) {
+        mySprite.y += 5
+    }
+    if (controller.player1.isPressed(ControllerButton.Down)) {
+        mySprite.y += -5
+    }
+    if (controller.player2.isPressed(ControllerButton.Left)) {
+        mySprite2.x += 5
+    }
+    if (controller.player2.isPressed(ControllerButton.Right)) {
+        mySprite2.x += -5
+    }
+    if (controller.player2.isPressed(ControllerButton.Up)) {
+        mySprite2.y += 5
+    }
+    if (controller.player2.isPressed(ControllerButton.Down)) {
+        mySprite2.y += -5
+    }
+    if (controller.player3.isPressed(ControllerButton.Left)) {
+        mySprite3.x += 5
+    }
+    if (controller.player3.isPressed(ControllerButton.Right)) {
+        mySprite3.x += -5
+    }
+    if (controller.player3.isPressed(ControllerButton.Up)) {
+        mySprite3.y += 5
+    }
+    if (controller.player3.isPressed(ControllerButton.Down)) {
+        mySprite3.y += -5
+    }
+    if (controller.player4.isPressed(ControllerButton.Left)) {
+        mySprite4.x += 5
+    }
+    if (controller.player4.isPressed(ControllerButton.Right)) {
+        mySprite4.x += -5
+    }
+    if (controller.player4.isPressed(ControllerButton.Up)) {
+        mySprite4.y += 5
+    }
+    if (controller.player4.isPressed(ControllerButton.Down)) {
+        mySprite4.y += -5
+    }
+})
 let location: tiles.Location = null
+let mySprite4: Sprite = null
+let mySprite3: Sprite = null
+let mySprite2: Sprite = null
+let mySprite: Sprite = null
 tiles.setCurrentTilemap(tilemap`level2`)
-let mySprite = sprites.create(img`
+mySprite = sprites.create(img`
     . . . . f f f f f . . . . . . . 
     . . . f e e e e e f . . . . . . 
     . . f d d d d e e e f . . . . . 
@@ -18,7 +72,7 @@ let mySprite = sprites.create(img`
     . f d d f d d f d d b e f f f f 
     . . f f f f f f f f f f f f f . 
     `, SpriteKind.Player)
-let mySprite2 = sprites.create(img`
+mySprite2 = sprites.create(img`
     . . . . . . . . . . b 5 b . . . 
     . . . . . . . . . b 5 b . . . . 
     . . . . . . b b b b b b . . . . 
@@ -36,7 +90,7 @@ let mySprite2 = sprites.create(img`
     . . . c c c c c c c c b b . . . 
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Player)
-let mySprite3 = sprites.create(img`
+mySprite3 = sprites.create(img`
     ........................
     ........................
     ........................
@@ -62,7 +116,7 @@ let mySprite3 = sprites.create(img`
     ........................
     ........................
     `, SpriteKind.Player)
-let mySprite4 = sprites.create(img`
+mySprite4 = sprites.create(img`
     . . 4 4 4 . . . . 4 4 4 . . . . 
     . 4 5 5 5 e . . e 5 5 5 4 . . . 
     4 5 5 5 5 5 e e 5 5 5 5 5 4 . . 
